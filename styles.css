@@ -63,13 +63,13 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    color: #f0fdfa;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #cffafe;
 }
 
 #logoSvg {
@@ -101,17 +101,30 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
-    background-color: #075985;
+    background-color: orange;
+    color: black;
 }
 
 .searchbar {
     display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    justify-self: flex-end;
+}
+
+.bar {
+    display: flex;
 }
 
 input {
-    flex: 1;
-    height: 20px;
-    align-self: center;
+    width: 30vw;
+    border-radius: 70px;
 }
 
 .hello {
