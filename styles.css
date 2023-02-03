@@ -12,24 +12,6 @@
     --orange: #E94560;
 }
 
- /* @media screen and (max-width: 600px) {
-    .container {
-        display: flex;
-        grid-template-columns: 1fr 1fr;
-        color: orange;
-    }
-
-    nav {
-        grid-column: 1 / 3;
-    }
-
-    header {
-        grid-column: 1 / 3;
-    }
-
-} */
-
-
 body {
     color: black;
     max-height: 100vh;
@@ -151,18 +133,24 @@ main {
     background-color: var(--dark);
 }
 
+h2 {
+    font-size: 2rem;
+}
+
  .card-container {
     display: grid;
     column-gap: 20px;
     row-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: 30px, 1fr;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 70px 1fr 1fr 1fr;
     padding: 20px;
 } 
 
 .title {
     color: white;
     align-self: center;
+    grid-column: span 2;
+    font-size: 2rem;
 }
 
 .card {
@@ -181,7 +169,7 @@ main {
 
 .cardTitle {
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 img {
@@ -196,12 +184,14 @@ img {
 
 .right-side-bar {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
+    color: white;
+    height: 25vh;
+    padding-right: 20px;
+    row-gap: 20px;
+    padding-top: 20px;
 }
 
-.announcements {
-    color: white;
-}
 
 .announce {
     border: black solid 2px;
@@ -221,6 +211,20 @@ img {
     border-radius: 10px;
     background-color: var(--lightdark);
     padding: 10px 10px 10px;
+}
+
+
+@media screen and (max-width: 930px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+    }
+
+    .title {
+        grid-column: unset;
+    }
+
 }
 
 
