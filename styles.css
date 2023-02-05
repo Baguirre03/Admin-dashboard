@@ -188,11 +188,11 @@ h2 {
 
 .card:hover {
     transform: translate(0, -5px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.99);
     filter: brightness(1.3);
     transition: .3s;
 }
-
+8
 
 .cardTitle {
     font-weight: bolder;
@@ -212,6 +212,7 @@ img {
 .right-side-bar {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 70px repeat(7, 1fr);
     color: white;
     height: 25vh;
     padding-right: 20px;
@@ -219,6 +220,9 @@ img {
     padding-top: 20px;
 }
 
+#announce-title {
+    align-self: center;
+}
 
 .announce {
     border: black solid 2px;
