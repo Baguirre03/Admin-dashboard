@@ -153,6 +153,12 @@ input:focus {
     transition: .5s;
 }
 
+input::placeholder {
+    font-size: 1.2rem;
+    align-self: center;
+    justify-self: right;
+}
+
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -214,23 +220,36 @@ h2 {
 .right-side-bar {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70px repeat(7, 1fr);
+    grid-template-rows: 70px auto;
     color: white;
-    height: 25vh;
-    padding-right: 20px;
     row-gap: 20px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
 #announce-title {
+    display: flex;
     align-self: center;
+    justify-content: flex-start;
 }
 
 .announce {
     border: black solid 2px;
     border-radius: 10px;
     background-color: var(--lightdark);
-    padding: 10px 10px 10px;
+    padding: 20px;
+}
+
+.linkedprofiles {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .trending {
@@ -283,6 +302,14 @@ h2 {
     .title {
         grid-column: unset;
     }
+    .announcements {
+        height: min-content;
+    }
+
+    .right-side-bar {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -295,15 +322,14 @@ h2 {
 
     .right-side-bar {
         display: grid;
-        height: min-content;
-        padding: 20px;
+        padding-left: 20px;
     }
 
     main {
         width: 100vw;
         display: flex;
         flex-direction: column;
-        height: min-content;
+        height: max-content;
     }
 
     .logo {
