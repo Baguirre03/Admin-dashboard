@@ -63,7 +63,7 @@ nav {
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .logo {
@@ -80,7 +80,7 @@ nav {
 }
 
 .sidebar-2 {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .sidebarLink {
@@ -158,6 +158,7 @@ main {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     background-color: var(--dark);
+    height: min-content;
 }
 
 h2 {
@@ -184,7 +185,7 @@ h2 {
     border: black solid 2px;
     border-radius: 10px;
     background-color: var(--lightdark);
-    color: var(--orange);
+    color: lightblue;
     display: flex;
     flex-direction: column;
     padding: 10px 10px 10px;
@@ -199,14 +200,7 @@ h2 {
     filter: brightness(1.3);
     transition: .3s;
 }
-
-
-.cardTitle {
-    font-weight: bolder;
-    font-size: 1.6rem;
-}
-
-img {
+.card img {
     width: 100%;
     height: 70%;
 }
@@ -214,6 +208,7 @@ img {
 #linkSvg {
     height: 45px;
     width: 45px;
+    fill: white;
 }
 
 .right-side-bar {
@@ -248,23 +243,114 @@ img {
     border: black solid 2px;
     border-radius: 10px;
     background-color: var(--lightdark);
-    padding: 10px 10px 10px;
+    display: flex;
+    padding: 10px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
+.webName {
+    width: 140px;
+    display: flex;
+    justify-content: flex-start;
+}
 
-@media screen and (max-width: 1000px) {
+.tren:hover {
+    color: lightblue;
+}
+
+.tren:hover svg {
+    fill: lightblue;
+}
+
+.linkedSvg {
+    height: 70%;
+    width: 90px;
+    fill: white;
+    align-self: center;
+}
+
+@media screen and (max-width: 1300px) {
     .card-container {
         display: grid;
         grid-template-columns: repeat(1, minmax(300px, 1fr));
         grid-auto-rows: 1fr;
+    }  
+    .card {
+        height: min-content;
     }
-
     .title {
         grid-column: unset;
     }
-
 }
 
 
+@media screen and (max-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
 
+    .right-side-bar {
+        display: grid;
+        height: min-content;
+        padding: 20px;
+    }
+
+    main {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .logo {
+        align-self: center;
+    }
+
+    .sidebar {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .sidebar-2, .sidebar-3 {
+        display: none;
+    }
+
+    .searchbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px 15px 15px;
+    }
+
+    input {
+        width: 40vw;
+    }
+
+    input:focus {
+        width: 45vw;
+    }
+
+    .profile {
+        padding-right: 20px;
+        align-self: center;
+    }
+
+    #linkedProf {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    input {
+        width: 13vw;
+    }
+
+    input:focus {
+        width: 15vw;
+    }
+}
 
